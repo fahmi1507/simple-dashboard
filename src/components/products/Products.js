@@ -6,7 +6,7 @@ const Products = ({ index, name }) => {
         <div className={`${index === 0 ? 'headline': ''} sku-top`} >
             <img src={prodCompetitor} alt="prod-competitor" width={index === 0 ? 80 : 60} height={index === 0 ? 80 : 60} />
             <div className='info-produk'>
-                <h3>{ name }</h3>
+                <p>{ name }</p>
                 <div className="info-terjual">
                     <p>RpXXXX</p>
                     <p>[jml terjual]</p>
