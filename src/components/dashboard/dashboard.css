@@ -1,0 +1,25 @@
+.dashboard-container {
+    padding: 30px 28px;
+    /* padding-left: 24px;
+    padding-right: 32px; */
+    background-color: #F7F7F7;
+    height: 852px;
+    margin-left: 70px;
+    margin-top: 4px;
+}
+
+.dashboard-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.dashboard-header-container > p {
+    font-size: 40px;
+}
+
+.dashboard-footer-container {
+    display: flex;
+    justify-content: space-between;
+}

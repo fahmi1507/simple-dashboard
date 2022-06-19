@@ -1,0 +1,20 @@
+.sales-to-container {
+    width: 276px;
+    height: 104px;
+    background-color: #fff;
+    padding: 12px;
+    margin: 16px 0;
+    border-radius: 2px;
+}
+
+.sales-to-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.sales-to-header > p {
+    font-size: 12px;
+}
+

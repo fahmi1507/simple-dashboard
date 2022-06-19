@@ -1,0 +1,34 @@
+.sku-container {
+    width: 275px;
+    height: 424px;
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 2px;
+}
+
+.sku-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+}
+
+.sku-header-container > p {
+    text-transform: uppercase;
+    color: #4D4F5C;
+    font-size: 20px;
+}
+
+.product-container {
+    overflow-y: auto;
+    height: 360px;
+}
+
+.product-container::-webkit-scrollbar {
+    display: none;
+}
+
+.product-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}

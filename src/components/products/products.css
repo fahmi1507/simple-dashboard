@@ -1,0 +1,39 @@
+.sku-top {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    border-radius: 6px;
+    height: 60px;
+    border: 1px solid #C5C5C59C;
+}
+
+.sku-top.headline {
+    background-color: #FFE7BD;
+    height: 80px;
+}
+
+.sku-top > img {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.info-produk {
+    margin: 0 auto;
+    padding: 4px;
+}
+
+.info-produk > h3 {
+    size: 20px;
+}
+
+.sku-header-container > p {
+    font-size: 14px;
+}
+
+.info-terjual {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4px;
+}
+

@@ -1,0 +1,33 @@
+nav {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.25);
+}
+
+.navbar {
+    height: 64px;
+    width: 100%;
+    padding: 0 34px;
+    background-color: #fff;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 180px;
+}
+
+.username {
+    font-weight: 600;
+}
+
+.user {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
