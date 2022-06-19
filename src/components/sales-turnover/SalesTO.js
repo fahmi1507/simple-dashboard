@@ -16,8 +16,7 @@ const SalesTO = () => {
                     <h3>Rp3,600,000</h3>
                     <div className='sales-to-header'>
                         <img src={arrowDown} alt="arrow" width={12} height={12} />
-                        <p>13.8 %</p>
-                        <p>last period in products sold</p>
+                        <p><span style={{color:"#ef563f", fontWeight: '900'}}>13.8%</span> last period in products sold</p>
                     </div>
                 </div>
                 <img src={cart} alt="cart"width={49} height={43} />
