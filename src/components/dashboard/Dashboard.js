@@ -1,6 +1,6 @@
 import moment from 'moment'
 import React, { useEffect, useState } from 'react'
-import { someEvent } from '../../mock-http'
+import { mock, someEvent } from '../../mock-http'
 import AveragePurchaseValue from '../average-purchase/AveragePurchaseValue'
 import SKUComponent from '../best-selling-sku/SKUComponent'
 import CalendarComponent from '../calendar/CalendarComponent'
@@ -9,13 +9,24 @@ import SalesTO from '../sales-turnover/SalesTO'
 import './dashboard.css'
 
 const Dashboard = () => {
-    useEffect(() => {
-        someEvent()
-    }, [])
+    const [chartData, setChartData] = useState([]);
     const [calendar, setCalendar] = useState({
         startDate: moment().subtract(7, 'days'),
         endDate: moment().subtract(1, 'days'),
     })
+
+    useEffect(() => {
+        const fetchData = async (calendar) => {
+            try {
+                const res = await mock(true, 200, calendar)
+                setChartData(res)
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        fetchData(calendar)
+    }, [calendar])
+    
 
     const handleChange = (start, end) => {
         setCalendar({
@@ -38,7 +49,7 @@ const Dashboard = () => {
                 <SalesTO/>
 
                 <div className='dashboard-footer-container'>
-                    <AveragePurchaseValue/>
+                    <AveragePurchaseValue datasets={chartData}/>
                     <SKUComponent title='best selling' middle/>
                     <SKUComponent title='top competitor'/>
                 </div>

@@ -16,8 +16,6 @@ const CalendarComponent = ({ calendar, handleChange }) => {
     const handleEvent = (event, picker) => {
         const { startDate, endDate } = picker;
 
-        console.log(startDate.format('DD/MM/YYYY'), endDate.format('DD/MM/YYYY'))
-
         handleChange(moment(startDate), moment(endDate));
     };
     const { startDate, endDate } = calendar;

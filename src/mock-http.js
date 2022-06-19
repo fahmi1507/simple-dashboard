@@ -1,27 +1,34 @@
-const data = [
-    {
-        label: 'Unit Per Transaction',
-        data: [3, 4, 3, 5, 5, 5, 6],
-        backgroundColor: '#707070',
-    },
-    {
-        label: 'Average Purchase',
-        data: [1, 2, 3, 5, 5, 5, 6],
-        backgroundColor: '#7AE28C',
-    },
-    {
-      label: 'Gross',
-      data: [1, 2, 3, 5, 5, 5, 6],
-      backgroundColor: '#289E45',
-    },
-    {
-      label: 'Nett',
-      data: [1, 2, 3, 5, 5, 5, 6],
-      backgroundColor: '#37B04C',
-    },    
-]
+import moment from "moment";
+export const mock = (success, timeout, calendar) => {
+    const { startDate, endDate } = calendar;
 
-export const mock = (success, timeout) => {
+    const start = parseInt(moment(startDate).format("DD-MM-YYYY").substring(0, 2))
+    const end = parseInt(moment(endDate).format("DD-MM-YYYY").substring(0, 2))
+
+    
+    const data = [
+        {
+            label: 'Unit Per Transaction',
+            data: [...Array(6)].map(()=>{return Math.floor(Math.random()*start*end)}),
+            backgroundColor: '#707070',
+        },
+        {
+            label: 'Average Purchase',
+            data: [...Array(6)].map(()=>{return Math.floor(Math.random()*start*end)}),
+            backgroundColor: '#7AE28C',
+        },
+        {
+          label: 'Gross',
+          data: [...Array(6)].map(()=>{return Math.floor(Math.random()*start*end)}),
+          backgroundColor: '#289E45',
+        },
+        {
+          label: 'Nett',
+          data: [...Array(6)].map(()=>{return Math.floor(Math.random()*start*end)}),
+          backgroundColor: '#37B04C',
+        },    
+    ]
+
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         if(success) {
@@ -32,15 +39,3 @@ export const mock = (success, timeout) => {
       }, timeout);
     });
 }
-  
-
-export const someEvent = async () => {
-try {
-    const res = await mock(true, 1000);
-    console.log(res, '<<<<<')
-} catch (e) {
-    console.log(e.message);
-}
-}
-
-someEvent()
