@@ -1,17 +1,36 @@
-import React from 'react'
+import moment from 'moment'
+import React, { useEffect, useState } from 'react'
+import { someEvent } from '../../mock-http'
 import AveragePurchaseValue from '../average-purchase/AveragePurchaseValue'
 import SKUComponent from '../best-selling-sku/SKUComponent'
-import DatePickerComponent from '../DatePickerComponent'
+import CalendarComponent from '../calendar/CalendarComponent'
 import MarketInsight from '../market-insight/MarketInsight'
 import SalesTO from '../sales-turnover/SalesTO'
 import './dashboard.css'
 
 const Dashboard = () => {
+    useEffect(() => {
+        someEvent()
+    }, [])
+    const [calendar, setCalendar] = useState({
+        startDate: moment().subtract(7, 'days'),
+        endDate: moment().subtract(1, 'days'),
+    })
+
+    const handleChange = (start, end) => {
+        setCalendar({
+            startDate: start,
+            endDate: end
+        })
+    }
     return (
         <div className='dashboard-container'>
                 <div className='dashboard-header-container'>
                     <p>Dashboard</p>
-                    <DatePickerComponent/>
+                    <CalendarComponent
+                        calendar={calendar}
+                        handleChange={handleChange}
+                    />
                 </div>
                 
                 <MarketInsight/>

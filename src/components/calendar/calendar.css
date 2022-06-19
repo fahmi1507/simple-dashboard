@@ -1,0 +1,105 @@
+.date-helper-wrapper {
+    display: inline-block;
+    max-width: 233px;
+}
+
+.date-helper-wrapper button.btn.selected-date-range-btn {
+    height: 36px;
+}
+
+.date-helper-wrapper button.btn.selected-date-range-btn span {
+    color: #263238;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.date-helper-wrapper button.btn.selected-date-range-btn .pull-right i {
+    color: #263238;
+}
+
+.date-helper-wrapper button.btn.selected-date-range-btn .pull-right{
+    margin-left: 3px;
+}
+
+.daterangepicker {
+    border: none;
+    box-shadow: 5px 5px 23px -7px #000;
+}
+
+.daterangepicker .drp-calendar,
+.daterangepicker .drp-buttons {
+    background-color: #fff;
+}
+
+.daterangepicker.show-calendar {
+    background-color: #fff;
+}
+
+.daterangepicker.show-calendar .ranges {
+    padding: 0 8px;
+}
+
+.daterangepicker.show-calendar .ranges li {
+    color: #8B8B8B;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 1px 0;
+    font-size: 14px;
+}
+
+.daterangepicker.show-calendar .ranges li.active,
+.daterangepicker.show-calendar .ranges li:hover {
+    background-color: #fff;
+    color: #37B04C;
+    border-radius: 3px;
+    font-weight: 900;
+}
+
+.daterangepicker .ranges li {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.daterangepicker .ranges li.active {
+    background-color: #37B04C;
+}
+
+.daterangepicker td.active.start-date,
+.daterangepicker td.active.end-date {
+    background-color: #37B04C;
+}
+
+.daterangepicker td.in-range {
+    background-color: #7AE28C;
+}
+
+.calendar-table {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.applyBtn {
+    background-color: #37B04C;
+    color: #fff;
+    border: 2px solid #37B04C;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.daterangepicker td.off,
+.daterangepicker td.off.in-range,
+.daterangepicker td.off.start-date,
+.daterangepicker td.off.end-date {
+    background-color: #fff;
+    border-color: transparent;
+    color: #999;
+}
+@media screen and (max-width: 992px){
+    .daterangepicker .drp-buttons {
+        text-align: center;
+    }
+    .daterangepicker .drp-buttons .drp-selected{
+        margin-bottom: 10px;
+    }
+    .daterangepicker .drp-buttons .btn{
+        margin: 0px;
+        width: 45%;
+    }
+}
