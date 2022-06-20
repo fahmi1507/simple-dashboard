@@ -18,4 +18,4 @@ const MarketInsight = () => {
     )
 }
 
-export default MarketInsight
+export default React.memo(MarketInsight)

@@ -16,7 +16,7 @@ const data = [
     {id: 10, name: '[Nama Produk]'},
 ]
 
-const SKUComponent = React.memo(({ title, middle }) => {
+const SKUComponent = ({ title, middle }) => {
     return (
         <div className='sku-container' style={middle && {margin: '0 16px'}}>
             <div className="sku-header-container">
@@ -34,6 +34,6 @@ const SKUComponent = React.memo(({ title, middle }) => {
 
         </div>
     )
-})
+};
 
-export default SKUComponent
+export default React.memo(SKUComponent);

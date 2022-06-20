@@ -25,4 +25,4 @@ const SalesTO = () => {
     )
 }
 
-export default SalesTO
+export default React.memo(SalesTO)
