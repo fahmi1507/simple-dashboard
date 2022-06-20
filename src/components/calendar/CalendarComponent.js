@@ -11,9 +11,9 @@ import './calendar.css'
 import { config, calendarRanges } from './utils';
 
 const CalendarComponent = ({ calendar, handleChange }) => {
-    const [ranges, setRanges] = useState(calendarRanges)
+    const [ ranges ] = useState(calendarRanges)
 
-    const handleEvent = (event, picker) => {
+    const handleEvent = (_, picker) => {
         const { startDate, endDate } = picker;
 
         handleChange(moment(startDate), moment(endDate));

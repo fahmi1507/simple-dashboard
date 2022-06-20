@@ -1,6 +1,6 @@
 import moment from 'moment'
 import React, { useEffect, useState } from 'react'
-import { mock, someEvent } from '../../mock-http'
+import { mock } from '../../mock-http'
 import AveragePurchaseValue from '../average-purchase/AveragePurchaseValue'
 import SKUComponent from '../best-selling-sku/SKUComponent'
 import CalendarComponent from '../calendar/CalendarComponent'
