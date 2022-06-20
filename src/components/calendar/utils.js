@@ -5,7 +5,7 @@ export const config = {
         cancelLabel: 'Cancel',
         applyLabel: 'Apply',
         format: 'DD MMM YYYY',
-        customRangeLabel: 'Pilih rentang',
+        customRangeLabel: 'Custom',
         daysOfWeek: [
             'Su',
             'Mo',
@@ -32,7 +32,7 @@ export const config = {
 
     },
     opens: 'left',
-    showCustomRangeLabel: false,
+    showCustomRangeLabel: true,
     alwaysShowCalendars: true,
     maxDate: moment().subtract(1, 'days'),
 };
@@ -41,5 +41,5 @@ export const calendarRanges = {
     'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
     'Last 7 Days': [moment().subtract(7, 'days'), moment().subtract(1, 'days')],
     'Last 30 Days': [moment().subtract(30, 'days'), moment().subtract(1, 'days')],
-    'This Month': [moment().startOf('month'), moment().endOf('month')],
+    'This Month': [moment().startOf('month'), moment().subtract(1, 'days')],
 };

@@ -21,7 +21,7 @@ const Dashboard = () => {
                 const res = await mock(true, 200, calendar)
                 setChartData(res)
             } catch (error) {
-                console.log(error)
+                throw new Error(error.message)
             }
         }
         fetchData(calendar)

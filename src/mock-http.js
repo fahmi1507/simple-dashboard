@@ -34,7 +34,7 @@ export const mock = (success, timeout, calendar) => {
         if(success) {
           resolve(data);
         } else {
-          reject({message: 'Error'});
+          reject({message: 'Internal Server Error'});
         }
       }, timeout);
     });

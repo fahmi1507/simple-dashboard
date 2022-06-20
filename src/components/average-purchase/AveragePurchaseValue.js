@@ -31,6 +31,11 @@ export const options = {
     },
     },
     maintainAspectRatio: false,
+    plugins: {
+        legend: {
+            position: 'bottom'
+        }
+    }
 };
 
 const labels = ['January', 'February', 'March', 'April', 'May', 'June'];
@@ -48,7 +53,6 @@ const AveragePurchaseValue = ({ datasets }) => {
             <div className='average-purchase-header'>
                 <p>AVERAGE PURCHASE VALUE</p>
                 <select name="cars" id="months">
-                    <option value="3">Last 3 Months</option>
                     <option value="6">Last 6 Months</option>
                 </select>
             </div>
