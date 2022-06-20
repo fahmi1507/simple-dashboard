@@ -17,6 +17,8 @@
 
 .dashboard-header-container > p {
     font-size: 40px;
+    font-weight: 600;
+    color: #707070C4;
 }
 
 .dashboard-footer-container {

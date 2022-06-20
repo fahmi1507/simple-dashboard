@@ -16,6 +16,16 @@ nav {
     height: 100%;
 }
 
+.logo-container {
+    display: flex;
+    align-items: flex-end;
+}
+
+.logo-container > p {
+    font-size: 11px;
+    margin: 0 4px;
+}
+
 .user-info {
     display: flex;
     justify-content: space-between;
