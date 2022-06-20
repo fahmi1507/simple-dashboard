@@ -38,7 +38,10 @@ const CalendarComponent = ({ calendar, handleChange }) => {
                     <img src={calendarImg} alt="calendar" width={22} height={22} />
                     <p>Period</p>
                     <span>{label}</span>
-                    <img src={downChevron} alt="downChevron" width={14} height={12} />
+                    <img src={downChevron} alt="downChevron" width={14} height={12} 
+                        style={{marginTop: '7px'}}
+                    
+                    />
                 </div>
             </DatetimeRangePicker>
         </div>
